@@ -1,16 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+/*Custom scroolbar design (Not working on mobile divices)*/
+::-webkit-scrollbar { /*Own page scroolbar design*/
+	width: 10px;
+} 
+
+::-webkit-scrollbar-track { /*Own scroolbar bacground*/
+	background: rgb(20,20,20);
+}
+ 
+::-webkit-scrollbar-thumb { /*Own scrollbar button*/
+	background: #40444b;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+} 
+
+::-webkit-scrollbar-thumb:hover { /*Own scrollbar button hover*/
+	background: #5c646b;
+}
+/*End of Custom scrollBar*/
+
 html, body {
     height: auto;
 }
 
 html {
     display: table;
+    margin: auto;
 }
 
 body {
-    background-color: #000000;
+    background: #202020;
     font: 12px Consolas, Courier;
     color: #FFFFFF;
+    display: table-cell;
     text-align: center;
+    vertical-align: middle;
 }
  
 form, p, span {
@@ -33,9 +62,11 @@ a:hover {
 }
  
 #wrapper,#loginform {
+    margin: 0 auto;
+    padding-bottom: 5px;
     text-align: center;
     background: #202020;
-    width: 100%;
+    width: 100vw;
     border: 1px solid #474747;
 }
  
@@ -49,10 +80,12 @@ a:hover {
 
 #chatbox {
     text-align: left;
+    margin: 0 auto;
+    margin-bottom: 5px;
     padding: 10px;
     background: #202020;
-    height: 50vh;
-    width: 90vh;
+    height: 80vh;
+    width: 98vw;
     border: 1px solid #474747;
     overflow: auto;
 }
@@ -102,4 +135,12 @@ img {
     vertical-align: top;
     margin-bottom: 10px;
     max-width: 20vw;
+}
+
+.submit, .input {
+    color: white;
+    font-size: 18px;
+    background-color: #474747;
+    border: 1px solid #474747;
+    border-radius: 3px;
 }

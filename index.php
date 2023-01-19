@@ -92,7 +92,7 @@
     <?php // msg input form
         echo '
             <form name="message" action="">
-                <input name="usermsg" autofocus="" spellcheck="true" type="text" id="usermsg" size="63"/> <input name="submitmsg" type="submit" id="submitmsg" value="Send"/>
+                <input class="input" name="usermsg" autofocus="" spellcheck="true" type="text" id="usermsg" size="63"/> <input class="submit" name="submitmsg" type="submit" id="submitmsg" value="Send"/>
             </form>';
     ?>
 

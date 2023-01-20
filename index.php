@@ -31,15 +31,29 @@
 	    } elseif (ctype_space($_POST['name'])) {
 		    echo "<span class='error' id='error'>Please enter a name</span>";
 	    } else {
-            $_SESSION["name"] = stripslashes(htmlspecialchars($_POST["name"]));
-            $fp = fopen("chat_logs/log_".date("d_m_Y").".log", "a");
-            fclose($fp);
+
+            // check if user have username SERVER
+            if ($_POST["name"] == "SERVER") {
+
+                session_destroy();
+                header("Location: /"); 
+            } else {
+                $_SESSION["name"] = stripslashes(htmlspecialchars($_POST["name"]));
+                $fp = fopen("chat_logs/log_".date("d_m_Y").".log", "a");
+
+                // log join to chat
+                fwrite($fp, "<div class='msgln'><span>(".date("H:i").") <b><userBlue>SERVER</userBlue></b>: <span class='colorYellow'>[".$_SESSION['name']."] joined the chat</span><br></span></div>");
+                fclose($fp);
+            }
         }
     }
 
     // logout
     if (isset($_GET["logout"])) {
         $fp = fopen("chat_logs/log_".date("d_m_Y").".log", "a");
+
+        // log leave to chat
+        fwrite($fp, "<div class='msgln'><span>(".date("H:i").") <b><userBlue>SERVER</userBlue></b>: <span class='colorYellow'>[".$_SESSION['name']."] left the chat</span><br></span></div>");
         fclose($fp);
         session_destroy();
         header("Location: /"); 

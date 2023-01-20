@@ -126,8 +126,19 @@ user {
     letter-spacing: -1px;
 }
 
+.colorYellow {
+    color: #f0f32c;
+}
+
 userRed {
     color: #e03b3b;
+    font: 15px Consolas, Courier;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+userBlue {
+    color: #263bf8;
     font: 15px Consolas, Courier;
     font-weight: bold;
     letter-spacing: -1px;

@@ -39,7 +39,7 @@
 
     // logout
     if (isset($_GET["logout"])) {
-        $fp = fopen("chat_logs/".date("d_m_Y").".log", "a");
+        $fp = fopen("chat_logs/log_".date("d_m_Y").".log", "a");
         fclose($fp);
         session_destroy();
         header("Location: /"); 
@@ -93,7 +93,7 @@
     <?php // msg input form
         echo '
             <form name="message" action="">
-                <input class="input textInput maxSize" name="usermsg" autofocus="" spellcheck="true" type="text" id="usermsg" size="63"/> 
+                <input class="input textInput" name="usermsg" autofocus="" type="text" id="usermsg"/> 
                 <input class="submit buttonInput" name="submitmsg" type="submit" id="submitmsg" value="Send"/>
             </form>';
     ?>

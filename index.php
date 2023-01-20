@@ -15,7 +15,7 @@
                     <p>Please enter your name to continue:</p>
 	                <br><br>
                     <label for="name">Name:</label>
-                    <input style="border: 1px solid #474747;" type="text" autofocus="" name="name" id="name" />
+                    <input class="textInput" style="border: 1px solid #474747;" type="text" autofocus="" name="name" id="name" />
                     <input type="submit" name="enter" id="enter" value="Enter" />
                 </form>
             </div>
@@ -51,6 +51,7 @@
     <link id="css" rel="stylesheet" type="text/css" href="assets/css/main.css">
     <title>Chat</title>
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 </head>
 <body>
 <?php
@@ -92,7 +93,8 @@
     <?php // msg input form
         echo '
             <form name="message" action="">
-                <input class="input" name="usermsg" autofocus="" spellcheck="true" type="text" id="usermsg" size="63"/> <input class="submit" name="submitmsg" type="submit" id="submitmsg" value="Send"/>
+                <input class="input textInput maxSize" name="usermsg" autofocus="" spellcheck="true" type="text" id="usermsg" size="63"/> 
+                <input class="submit buttonInput" name="submitmsg" type="submit" id="submitmsg" value="Send"/>
             </form>';
     ?>
 

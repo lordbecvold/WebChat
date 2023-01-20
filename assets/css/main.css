@@ -81,15 +81,15 @@ a:hover {
 #chatbox {
     text-align: left;
     margin: 0 auto;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     padding: 10px;
     background: #202020;
-    height: 80vh;
-    width: 98vw;
+    height: 85.5vh;
+    width: 94.5%;
     border: 1px solid #474747;
     overflow: auto;
 }
- 
+
 #usermsg {
     width: 40vw;
     border: 1px solid #FFFFFF;
@@ -137,10 +137,38 @@ img {
     max-width: 20vw;
 }
 
-.submit, .input {
+.submit, .buttonInput {
     color: white;
     font-size: 18px;
-    background-color: #474747;
-    border: 1px solid #474747;
+    background: #171717;
+    border: 1px solid darkgrey;
     border-radius: 3px;
+}
+
+.textInput {
+	border: 1px solid darkgrey;
+	border-radius: 4px;
+	background: #171717;
+	font-family: arial;
+	margin: 1px;
+	padding: 2px;
+	color: white;
+}
+
+.textInput:-webkit-autofill, .textInput:-webkit-autofill:hover, .textInput:-webkit-autofill:focus, .textInput:-webkit-autofill, .textInput:-webkit-autofill:hover, .textInput:-webkit-autofill:focus, .textInput:-webkit-autofill, .textInput:-webkit-autofill:hover, .textInput:-webkit-autofill:focus {
+    border: 1px solid darkgrey;
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0px 1000px #171717 inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.maxSize {
+    width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+
+    #chatbox {
+        height: 75.5vh;
+    }
 }

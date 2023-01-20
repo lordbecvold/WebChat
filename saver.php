@@ -16,7 +16,14 @@
                 $user = "<user>".$_SESSION['name']."</user>";
             }
 
-            fwrite($fp, "<div class='msgln'><span>(".date("H:i").") <b>".$user."</b>: ".stripslashes (htmlspecialchars($text))."<br></span></div>");
+            $msg = preg_replace(
+                "~[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]~",
+                "<a class='blue-text' target='_blank' href=\"\\0\">\\0</a>", 
+                stripslashes(htmlspecialchars($text)));
+
+
+
+            fwrite($fp, "<div class='msgln'><span>(".date("H:i").") <b>".$user."</b>: ".$msg."<br></span></div>");
             fclose($fp);
         } 
     }

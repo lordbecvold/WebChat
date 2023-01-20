@@ -144,6 +144,10 @@ userBlue {
     letter-spacing: -1px;
 }
 
+.blue-text {
+    color: #5364ff;
+}
+
 alert {
     text-align: center;
 }

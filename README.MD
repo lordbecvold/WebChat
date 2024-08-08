@@ -1,12 +1,13 @@
 # SIMPLE-PHP CHAT
+Simple php web chatroom
 
 # installation
-- set saver.php & index.php file write permission
+- set file write permission to saver.php & index.php
 - disable apache autoindex module
 - use index folder as root directory
 
 # WARNING
-This application is not secured for private communication, it is used for public chat
+This application is not secure for private communication, it is used for public chat
 
 ## Dependencies
 * Jquery

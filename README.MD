@@ -13,3 +13,6 @@ This application is not secure for private communication, it is used for public 
 * Jquery
    * Version: **1.3.2**
    * [Website](https://jquery.com/)
+
+## License
+The framework is open-sourced software licensed under the [MIT license](https://github.com/lukasbecvar/web-chat/blob/main/LICENSE)

@@ -1,5 +1,5 @@
 # SIMPLE-PHP CHAT
-Simple php web chatroom
+Simple php browser chat app.
 
 # installation
 - set file write permission to saver.php & index.php
@@ -7,7 +7,10 @@ Simple php web chatroom
 - use index folder as root directory
 
 # WARNING
-This application is not secure for private communication, it is used for public chat
+This application is not secure for private communication.
+
+## End of support
+This project is no longer being maintained or developed, and no further updates or support will be provided.
 
 ## Dependencies
 * Jquery
@@ -15,4 +18,4 @@ This application is not secure for private communication, it is used for public 
    * [Website](https://jquery.com/)
 
 ## License
-The framework is open-sourced software licensed under the [MIT license](https://github.com/lukasbecvar/web-chat/blob/main/LICENSE)
+The project is open-sourced software licensed under the [MIT license](https://github.com/lukasbecvar/web-chat/blob/main/LICENSE)
